@@ -32,9 +32,19 @@ WordCounter = []
 
 for x in range(len(words)):
 	for y in range(len(keywordsList[x])):
-		if keywordsList[y] not in Wordlist:
+		if keywordsList[x][y] not in Wordlist:
 			Wordlist.append(keywordsList[x][y])
+			WordCounter.append(0)
+			
 
-		#print(keywordsList[y]," ")
+		if keywordsList[x][y] in Wordlist:
+			WordCounter[Wordlist.index(keywordsList[x][y])]+=1
+			#print(keywordsList[x][y],":",WordCounter[Wordlist.index(keywordsList[x][y])])
+			
 
-print(Wordlist)
+for i in range(len(Wordlist)):
+	print(Wordlist[i] , ":" , WordCounter[i])
+
+
+#for i in range(len(Wordlist)):
+	#print(Wordlist[i],":",WordCounter[i]," ")
