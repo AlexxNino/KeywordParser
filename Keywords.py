@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup as soup
 #REMEMBER TO REMOVE API KEY BEFORE COMMIT
 #
 #
-quandl.ApiConfig.api_key = "53yj4rWZzWz6AF2Pe4Pu"
+quandl.ApiConfig.api_key = "@@@@@@@@@@@@@@"
 mydata = quandl.get('WFE/INDEXES_NYSE')
 print(mydata.head(5))
 
