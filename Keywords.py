@@ -1,8 +1,18 @@
 import bs4
 import re
+import quandl
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 
+#Stock api
+#
+#
+#REMEMBER TO REMOVE API KEY BEFORE COMMIT
+#
+#
+quandl.ApiConfig.api_key = "53yj4rWZzWz6AF2Pe4Pu"
+mydata = quandl.get('WFE/INDEXES_NYSE')
+print(mydata.head(5))
 
 #defining stuff and parse
 my_url = 'https://www.marketwatch.com/latest-news?mod=top_nav'
@@ -46,5 +56,5 @@ bubbleSort(WordCounter,Wordlist)
 
 
 #print the lists
-for i in range(len(WordCounter)):
-	print(Wordlist[i] , ":" , WordCounter[i])
+#for i in range(len(WordCounter)):
+	#print(Wordlist[i] , ":" , WordCounter[i])
